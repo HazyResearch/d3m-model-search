@@ -143,7 +143,7 @@ class HyperbandExecutor(executors.Executor.Executor):
         s_max = int(math.floor(math.log(R, eta)))
         # B = (s_max + 1) * R
         for s in range(0, s_max + 1):
-            n = math.ceil(int((s_max + 1) / (s + 1)) * eta ** s)
+            n = math.ceil((s_max + 1) / (s + 1) * eta ** s)
             r = R * eta ** (-s)
             bracket = []
             for i in range(0, s + 1):
